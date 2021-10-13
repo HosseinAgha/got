@@ -547,7 +547,7 @@ import got from 'got';
 const url = 'https://httpbin.org/anything';
 
 // This:
-const body = await got(url).json();
+const { body } = await got(url).json();
 
 // is semantically the same as this:
 const body = await got(url, {responseType: 'json', resolveBodyOnly: true});
